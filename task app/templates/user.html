@@ -1,0 +1,14 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+
+  <h1>Ovde samo mozes ulogovan</h1>
+  <form method="POST">
+    <input type="email" name="email" value="{{user.email}}" placeholder="Email">
+    <input type="employee_identification" name="employee_identification" value="{{user.employee_identification or ''}}" placeholder="Employee ID">
+    <input type="submit" value="Sacuvaj">
+  </form>
+
+{% endblock %}
+
+

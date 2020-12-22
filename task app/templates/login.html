@@ -1,0 +1,15 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+
+  {% if error %}
+  <div style="color:red">{{error}}</div>
+{% endif %}
+    <form method="POST">
+      <input type="email" name="email" placeholder="Unesite Email">
+      <input type="password" name="password" placeholder="Unesite Password">
+      <input type="submit" value="Uloguj Se">
+    </form>
+{% endblock %}
+
+

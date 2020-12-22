@@ -1,0 +1,27 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+
+  <h1>Korisnici</h1>
+  <table>
+    <tr>
+      <th>Email</th>
+      <th>Login atempts</th>
+      <th>Login success</th>
+      <th>Employee ID</th>
+      <th>Role</th>
+    </tr>
+    {% for user in users %}
+    <tr>
+      <td>{{user.email}}</td>
+      <td>{{user.login_attempts}}</td>
+      <td>{{user.login_success}}</td>
+      <td>{{user.employee_identification or 'N\A'}}</td>
+      <td>{{'admin' if user.role else 'employee' }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+{% endblock %}
+
+
