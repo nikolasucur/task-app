@@ -2,7 +2,7 @@
 
 {% block content %}
 
-  <h1>Ovde samo mozes ulogovan</h1>
+  <h1>You can be here only if you are logged in</h1>
   <form method="POST">
     <input type="email" name="email" value="{{user.email}}" placeholder="Email">
     <input type="employee_identification" name="employee_identification" value="{{user.employee_identification or ''}}" placeholder="Employee ID">
